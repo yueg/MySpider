@@ -14,6 +14,13 @@ BOT_NAME = 'mySpider'
 SPIDER_MODULES = ['mySpider.spiders']
 NEWSPIDER_MODULE = 'mySpider.spiders'
 
+ITEM_PIPELINES = {'mySpider.pipelines.ImageDownloadPipeline': 1}
+
+IMAGES_STORE = '/tmp/images'
+
+
+DOWNLOAD_DELAY = 0.25
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'mySpider (+http://www.yourdomain.com)'
